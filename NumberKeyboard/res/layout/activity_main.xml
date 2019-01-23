@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.numberkeyboard.MainActivity" >
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/topbar"
+        android:gravity="center"
+        android:background="#00ffff"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数字键盘"
+            android:textSize="24sp"
+            android:textColor="#ffffff"
+            />
+    </RelativeLayout>
+    
+    <EditText 
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/key"
+        android:textSize="16sp"
+        android:hint="调用数字键盘"
+        android:layout_below="@id/topbar"
+        android:inputType="none"
+        android:background="@null"
+        />
+    
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboardview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5.0dp"
+        android:background="#ffffffff"
+        android:focusable="true"
+        android:keyBackground="@drawable/calculator_button_bg"
+        android:keyTextColor="@color/black"
+        android:keyTextSize="26.0sp"
+        android:shadowColor="#ffffffff"
+        android:shadowRadius="0.0"
+        android:visibility="gone" />
+
+</RelativeLayout>
